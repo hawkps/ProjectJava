@@ -1,3 +1,4 @@
+//this is a comment.
 package prog24178;
 
 import javax.swing.JFrame;
@@ -7,6 +8,7 @@ import javax.swing.JTextField;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.JSlider;
+
 
 public class KeyApp extends JFrame implements KeyListener{
 	Container c;
