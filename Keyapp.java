@@ -1,6 +1,6 @@
 //this is a comment.
 package prog24178;
-
+//this is a test
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
