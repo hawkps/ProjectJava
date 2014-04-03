@@ -1,0 +1,121 @@
+package prog24178;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+public class ListLibrary extends JFrame implements ActionListener{
+	ArrayList<String> Title_s = new ArrayList<String>();
+	ArrayList<String> Author_s = new ArrayList<String>();
+	ArrayList<String> Number_s = new ArrayList<String>();
+	ArrayList<String> Date_s = new ArrayList<String>();
+	ArrayList<String> Rating_s = new ArrayList<String>();
+	ArrayList<String> Genre_s = new ArrayList<String>();
+
+	// replace "new ...()" with: public objects from other windows or associative getters //
+	// These variables are used below //
+
+	public ListLibrary() {	
+		getContentPane().setLayout(new BorderLayout(0, 0));
+
+		JPanel panel = new JPanel();
+		getContentPane().add(panel, BorderLayout.NORTH);
+		FlowLayout fl_panel = new FlowLayout(FlowLayout.CENTER, 5, 5);
+		panel.setLayout(fl_panel);
+
+		JButton btnTitle = new JButton("Title");
+		panel.add(btnTitle);
+		btnTitle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sort();
+			}});
+
+		JButton btnAuthor = new JButton("Author");
+		panel.add(btnAuthor);
+		btnAuthor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sort();
+			}});
+
+		JButton btnNumber = new JButton("Number#");
+		panel.add(btnNumber);
+		btnNumber.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sort();
+			}});
+
+		JButton btnDate = new JButton("Date Added");
+		panel.add(btnDate);
+		btnDate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sort();
+			}});
+
+		JButton btnRating = new JButton("Rating");
+		panel.add(btnRating);
+		btnRating.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sort();
+			}});
+
+		JButton btnGenre = new JButton("Genre");
+		panel.add(btnGenre);
+		btnGenre.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sort();
+			}});
+
+		JPanel Grid = new JPanel();
+		getContentPane().add(Grid, BorderLayout.CENTER);
+		
+		JPanel pn1 = new JPanel(); JPanel pn2 = new JPanel(); JPanel pn3 = new JPanel();
+		JPanel pn4 = new JPanel(); JPanel pn5 = new JPanel(); JPanel pn6 = new JPanel();
+		
+		Grid.add(pn1); Grid.add(pn2); Grid.add(pn3); Grid.add(pn4); Grid.add(pn5); Grid.add(pn6);
+		
+		populate(Grid);
+	}
+
+	public void populate(JPanel grid) {
+
+		try{
+			grid.setLayout(new GridLayout(Title_s.size(), 6, 2, 2));
+		} catch (Exception e) {  }
+		
+		for (int i = 0; i < Title_s.size(); i++ ) {
+			// add each field here once it is tokenized //
+			// grid is named "grid" //
+		}
+	}
+
+	public void sort() {
+		//
+	}
+
+	// ^^ not sure if this is right ^^ //
+
+	/*  int n = v.size();
+    for(int i = 0; i < n ; i++)
+      System.out.println( v.get( i ) );
+
+
+
+      centerPRow1 = new JPanel();
+	centerPRow1.setLayout(new FlowLayout());
+	centerP.add(centerPRow1);
+	 */
+	public static void main(String[] args) {
+		ListLibrary app = new ListLibrary();
+		app.setVisible(true);
+		app.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		app.pack();
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
+
+	}
+
+}
